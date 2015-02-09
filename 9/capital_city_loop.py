@@ -10,7 +10,7 @@ def getCapital():
 
 def userInteraction():
 	userInput = ""
-	while userInput != "exit":
+	while True:
 		stateCapitalPair = getCapital()
 		state = stateCapitalPair[0]
 		capital = stateCapitalPair[1]
@@ -21,7 +21,6 @@ def userInteraction():
 			print("Correct!")
 		else:
 			print("Wrong!")
-
 
 userInteraction()
 
