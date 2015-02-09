@@ -2,15 +2,14 @@ from capitals import capitals_dict
 import random
 
 def getCapital():
-	keyList = capitals_dict.keys() #grab entire list of keys
-	state = random.choice(keyList) #select random key
+	state = random.choice(capitals_dict.keys()) #select random key
 	capital = capitals_dict[state] #get capitol
 
 	return state, capital
 
 def userInteraction():
 	userInput = ""
-	while userInput != "exit":
+	while True:
 		stateCapitalPair = getCapital()
 		state = stateCapitalPair[0]
 		capital = stateCapitalPair[1]
@@ -21,7 +20,6 @@ def userInteraction():
 			print("Correct!")
 		else:
 			print("Wrong!")
-
 
 userInteraction()
 
